@@ -59,6 +59,5 @@ workflow {
     download_channel = download_data(Channel.from(params.accession))
     input_fasta_channel = Channel.fromPath("${params.in}/*.fasta")
     combined_channel = download_channel.concat(input_fasta_channel)
-    combine_fasta(combined_channel.collect()) | mafft | trimAl
-    
+    combine_fasta(combined_channel.collect()) | mafft | trimAl    
 }

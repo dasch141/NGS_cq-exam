@@ -1,0 +1,11 @@
+.*
+*.pdf
+!.gitignore
+**/*.fasta
+**/work/
+**/output/
+**/cache/
+.nextflow.log*
+*:Zone.Identifier
+*:shield
+**/exercise04/singularity_containers/

@@ -47,11 +47,11 @@ process trimAl {
     input:
         path infile
     output:
-        path "seqs_compared_to_${params.accession}.fasta"
-        path "seqs_compared_to_${params.accession}.html"
+        path "alignment_ref-seq_${params.accession}.fasta"
+        path "report_ref-seq_${params.accession}.html"
     script:
     """
-    trimal -in ${infile} -out seqs_compared_to_${params.accession}.fasta -htmlout seqs_compared_to_${params.accession}.html -automated1
+    trimal -in ${infile} -out alignment_ref-seq_${params.accession}.fasta -htmlout report_ref-seq_${params.accession}.html -automated1
     """
 }
 
